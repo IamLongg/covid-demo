@@ -1,0 +1,44 @@
+.protect {
+  padding: 0rem 7rem 7rem;
+  &-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 4rem;
+    &-box {
+      padding: 2rem;
+      background-color: $white;
+      box-shadow: $boxShadow;
+      border-radius: 0.5rem;
+      border: $boder;
+      text-align: center;
+      img {
+        width: 50%;
+        object-fit: cover;
+        margin: 0 auto;
+      }
+      h3 {
+        font-size: 2.5rem;
+        color: $graydark;
+        line-height: 5rem;
+        text-transform: capitalize;
+      }
+      p {
+        font-size: 1.4rem;
+        color: $gray;
+        line-height: 3rem;
+      }
+    }
+  }
+  @include maxWidth(991px) {
+    html {
+      font-size: 55%;
+    }
+    padding: 2rem;
+  }
+
+  @include maxWidth(450px) {
+    html {
+      font-size: 50%;
+    }
+  }
+}

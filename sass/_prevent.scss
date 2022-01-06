@@ -1,0 +1,47 @@
+.prevent {
+  padding: 0 7rem;
+  background: $bgdark;
+  &-box {
+    display: flex;
+    flex-wrap: wrap;
+    &-image {
+      flex: 1 1 35rem;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &-content {
+      flex: 1 1 35rem;
+      margin: auto 0;
+      h1 {
+        text-align: left;
+      }
+      p {
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+        color: $gray;
+      }
+      ul {
+        padding: 1rem 2rem;
+        li {
+          font-size: 1.4rem;
+          color: $gray;
+          line-height: 2.5rem;
+        }
+      }
+    }
+  }
+  @include maxWidth(991px) {
+    html {
+      font-size: 55%;
+    }
+    padding: 2rem;
+  }
+
+  @include maxWidth(450px) {
+    html {
+      font-size: 50%;
+    }
+  }
+}

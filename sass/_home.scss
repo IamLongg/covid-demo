@@ -1,0 +1,46 @@
+.home {
+  padding: 5rem 7rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &-content {
+    flex: 1 1 35rem;
+    margin: auto;
+    span {
+      font-size: 2rem;
+      color: $red;
+      line-height: 3.5rem;
+    }
+    h3 {
+      font-size: 4rem;
+      line-height: 6rem;
+      color: $graydark;
+      text-transform: capitalize;
+      padding: 1rem 0;
+    }
+    p {
+      font-size: 1.4rem;
+      color: $gray;
+      line-height: 2.5rem;
+    }
+  }
+  &-image {
+    flex: 1 1 35rem;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  @include maxWidth(991px) {
+    html {
+      font-size: 55%;
+    }
+    padding: 2rem;
+  }
+
+  @include maxWidth(450px) {
+    html {
+      font-size: 50%;
+    }
+  }
+}

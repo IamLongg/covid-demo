@@ -1,0 +1,73 @@
+.footer {
+  padding: 0 7rem;
+  background-color: $bgdark;
+  &-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 1.5rem;
+    &-box {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 0;
+      h3 {
+        font-size: 2rem;
+        line-height: 4rem;
+        color: $white;
+        padding-bottom: 1rem;
+        text-transform: capitalize;
+      }
+      p {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: $gray;
+        text-transform: capitalize;
+        padding: 0.5rem 0;
+        padding-right: 1.5rem;
+      }
+      a {
+        font-size: 1.4rem;
+        padding: 0.5rem 0;
+        color: $gray;
+        text-transform: capitalize;
+        &:hover {
+          color: $red;
+        }
+      }
+      i {
+        font-size: 1.4rem;
+        padding-right: 1.5rem;
+        text-align: center;
+        color: $red;
+        padding-bottom: 1rem;
+      }
+      div {
+        a {
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
+          border: 0.1rem solid #666;
+          text-align: center;
+          font-size: 1.7rem;
+          line-height: 2.8rem;
+          margin-right: 1rem;
+          &:hover {
+            background-color: $red;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  @include maxWidth(991px) {
+    html {
+      font-size: 55%;
+    }
+    padding: 2rem;
+  }
+
+  @include maxWidth(450px) {
+    html {
+      font-size: 50%;
+    }
+  }
+}
